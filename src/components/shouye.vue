@@ -24,7 +24,6 @@
     <div class="daohang0">
       <div class="logo">
         <img class="datu" :src="imgsrc" alt />
-        <img class="xiaotu" :src="imgImg" alt />
       </div>
 
       <div class="daohang1">
@@ -53,15 +52,7 @@
             <el-menu-item index="2-3">学社团</el-menu-item>
           </el-submenu>
         </el-menu>
-        <el-menu
-          :default-active="activeIndex2"
-          class="el-menu-demo"
-          mode="horizontal"
-          @select="handleSelect"
-          background-color="#545c64"
-          text-color="#fff"
-          active-text-color="#ffd04b"
-        ></el-menu>
+       
       </div>
 
       <div class="tuijian" style="margin-top: 45px;">
@@ -69,31 +60,31 @@
           <el-button class="btn" slot="append" icon="el-icon-search"></el-button>
         </el-input>
       </div>
-      <p class="zhongshu">中书教育编程</p>
-      <p class="yuwen">语文</p>
-      <p class="shuxue">数学</p>
+      
     </div>
-  
+
     <div class="gouwuche">
       <el-button class="btn" slot="append" icon="el-icon-shopping-cart-2">购物车</el-button>
     </div>
+ 
+
+
+ 
   </div>
 </template>
 
 
 <script>
-import img from "@/images/2.png";
-import imgs from "@/images/3.png";
+import img from "@/images/1.jpg";
 export default {
   data() {
     return {
       imgsrc: img,
-      imgImg: imgs,
       activeIndex: "1",
       activeIndex2: "1",
       input3: "",
-      select: ""
-      
+      select: "",
+      input: ''
     };
   },
   methods: {
@@ -136,16 +127,11 @@ export default {
   float: left;
 }
 .daohang0 .datu {
-  width: 180px;
-  height: 60px;
+  width: 200px;
+  height: 120px;
   margin-bottom: 10px;
   margin-top: 6px;
   margin-left: 40px;
-}
-.daohang0 .xiaotu {
-  width: 114px;
-  height: 20px;
-  margin-left: 68px;
 }
 .daohang1 {
   width: 510px;
@@ -195,36 +181,7 @@ export default {
   border: 1px solid #ccc;
   overflow: hidden;
 }
-.zhongshu,
-.yuwen,
-.shuxue {
-  height: 30px;
-  background-color: #ddd;
-  border-radius: 50px;
-  margin: 5px;
-  margin-left: 10px;
-  font-size: 12px;
-  color: #333;
-  text-align: center;
-  line-height: 30px;
-  position: absolute;
-  opacity: 0.5;
-}
-.zhongshu {
-  width: 100px;
-  margin-top: 51px;
-  margin-left: 822px;
-}
-.yuwen {
-  width: 50px;
-  margin-top: 51px;
-  margin-left: 933px;
-}
-.shuxue {
-  width: 50px;
-  margin-top: 51px;
-  margin-left: 993px;
-}
+
 .el-input-group__append,
 .el-input-group__prepend {
   border: none;
